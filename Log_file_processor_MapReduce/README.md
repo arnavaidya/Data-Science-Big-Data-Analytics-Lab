@@ -1,8 +1,6 @@
 # Log file processing distributed application using MapReduce
 Design a distributed application using MapReduce which processes a log file of a system. List out the users who have logged for maximum period on the system. Use simple log file from the Internet and process it using a pseudo distribution mode on Hadoop platform.
 
-# How to Execute WordCount Program in MapReduce using Cloudera Distribution Hadoop(CDH)
-
 # 1. Introduction
 
 This project implements a Log Processing program using Hadoop MapReduce on the Cloudera Distribution of Hadoop (CDH). The program reads a log file, extracts and counts occurrences of specific patterns (e.g., IP addresses, error codes), and processes them using HDFS and MapReduce. The program is developed in Java using Eclipse IDE and executed on Cloudera Hadoop.
