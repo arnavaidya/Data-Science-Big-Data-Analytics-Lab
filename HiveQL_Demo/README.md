@@ -114,69 +114,69 @@ Scan the table:
 
 # Step 12: Create an External Hive Table
 
-CREATE EXTERNAL TABLE empdata123(ename STRING, esal INT)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ' '
-STORED AS TEXTFILE
-LOCATION '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata123';
+    CREATE EXTERNAL TABLE empdata123(ename STRING, esal INT)
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY ' '
+    STORED AS TEXTFILE
+    LOCATION '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata123';
 
 Load data into Hive table:
 
-LOAD DATA LOCAL INPATH '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata123'
-INTO TABLE empdata123;
+    LOAD DATA LOCAL INPATH '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata123'
+    INTO TABLE empdata123;
 
 Query the table:
 
-SELECT * FROM empdata123;
+    SELECT * FROM empdata123;
 
 # Step 13: Create a Hive Table Linked to HBase
 
-CREATE EXTERNAL TABLE hivee_table_emp(id INT, name STRING, esal INT)
-STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
-WITH SERDEPROPERTIES ("hbase.columns.mapping"=":key,cf:name,cf:sal")
-TBLPROPERTIES ("hbase.table.name"="emphivee");
+    CREATE EXTERNAL TABLE hivee_table_emp(id INT, name STRING, esal INT)
+    STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+    WITH SERDEPROPERTIES ("hbase.columns.mapping"=":key,cf:name,cf:sal")
+    TBLPROPERTIES ("hbase.table.name"="emphivee");
 
 Query the table:
 
-SELECT * FROM hivee_table_emp;
+    SELECT * FROM hivee_table_emp;
 
 # Step 14: Create Another Hive Table and Insert Data
 
-CREATE TABLE empdbnew(eno INT, ename STRING, esal INT)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ' '
-STORED AS TEXTFILE;
+    CREATE TABLE empdbnew(eno INT, ename STRING, esal INT)
+    ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY ' '
+    STORED AS TEXTFILE;
 
 Load data:
 
-LOAD DATA LOCAL INPATH '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata321'
-INTO TABLE empdbnew;
+    LOAD DATA LOCAL INPATH '/home/cloudera/Desktop/33280/Workspace/Assignment_3/empdata321'
+    INTO TABLE empdbnew;
 
 Check the data:
 
-SELECT * FROM empdbnew;
+    SELECT * FROM empdbnew;
 
 Insert Hive table data into HBase table:
 
-INSERT INTO hivee_table_emp SELECT * FROM empdbnew;
+    INSERT INTO hivee_table_emp SELECT * FROM empdbnew;
 
 Verify insertion:
 
-SELECT * FROM hivee_table_emp;
+    SELECT * FROM hivee_table_emp;
 
 # Step 15: Create a Hive Table for Flights Data in HBase
 
-CREATE EXTERNAL TABLE hbase_flight_new(
-    fno INT, 
-    fsource STRING,
-    fdest STRING,
-    fsh_at STRING,
-    fsh_dt STRING,
-    fsch_delay STRING,
-    delay INT
-)
-STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
-WITH SERDEPROPERTIES (
-    "hbase.columns.mapping"=":key,finfo:src,finfo:dest,fsch:at,fsch:dt,fsch:delay,delay:dl"
-)
-TBLPROPERTIES ("hbase.table.name"="flight");
+    CREATE EXTERNAL TABLE hbase_flight_new(
+        fno INT, 
+        fsource STRING,
+        fdest STRING,
+        fsh_at STRING,
+        fsh_dt STRING,
+        fsch_delay STRING,
+        delay INT
+    )
+    STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+    WITH SERDEPROPERTIES (
+        "hbase.columns.mapping"=":key,finfo:src,finfo:dest,fsch:at,fsch:dt,fsch:delay,delay:dl"
+    )
+    TBLPROPERTIES ("hbase.table.name"="flight");
