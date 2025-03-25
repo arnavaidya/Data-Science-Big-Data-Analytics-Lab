@@ -1,7 +1,6 @@
 # HiveQL Demo Problem Statement
 
 Write an application using HiveQL for flight information system which will include 
-
 1. Creating, Dropping, and altering Database tables.
 2. Creating an external Hive table. 
 3. Load table with data, insert new values and field in the table, Join tables with Hive
