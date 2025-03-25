@@ -16,6 +16,7 @@ Create a table named flight with column families finfo and fsch.
     create 'flight','finfo','fsch'
 
 Check if the table is created:
+    
     list
     
 # Step 4: Insert Data into HBase
@@ -34,24 +35,38 @@ Insert flight records with different source, destination, arrival time, and depa
     put 'flight',2,'fsch:delay','2min'
 
 # Step 5: Scan the HBase Table
+    
     scan 'flight'
+
 This retrieves all records in the flight table.
 
 # Step 6: Modify the HBase Table
+
 Add a new column family named revenue.
+    
     alter 'flight', NAME=>'revenue'
+
 Insert revenue data for a flight:
+    
     put 'flight',4,'revenue:rs','45000'
+
 Scan the table again:
+    
     scan 'flight'
+
 Delete the revenue column:
+    
     alter 'flight', NAME=>'revenue', METHOD=>'delete'
 
 # Step 7: Create and Drop Tables in HBase
+
 Create a new table tb1:
+    
     create 'tb1','cf'
     list
+
 Disable and drop tb1:
+    
     disable 'tb1'
     drop 'tb1'
     list
