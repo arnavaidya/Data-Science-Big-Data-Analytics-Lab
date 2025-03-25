@@ -87,13 +87,13 @@ Scan only the finfo:src column:
 
 # Step 9: Create Another Table emphivee and Insert Employee Data
 
-create 'emphivee','cf'
-put 'emphivee',1,'cf:name','Arnav'
-put 'emphivee',1,'cf:sal',45000
-put 'emphivee',2,'cf:name','Pranav'
-put 'emphivee',2,'cf:sal',40000
-put 'emphivee',3,'cf:name','Sampada'
-put 'emphivee',3,'cf:sal',42000
+    create 'emphivee','cf'
+    put 'emphivee',1,'cf:name','Arnav'
+    put 'emphivee',1,'cf:sal',45000
+    put 'emphivee',2,'cf:name','Pranav'
+    put 'emphivee',2,'cf:sal',40000
+    put 'emphivee',3,'cf:name','Sampada'
+    put 'emphivee',3,'cf:sal',42000
 
 Scan the table:
   
@@ -101,12 +101,12 @@ Scan the table:
 
 # Step 10: Alter Table to Add Delay Data
 
-alter 'flight',NAME=>'delay'
-put 'flight',1,'delay:dl',10
-put 'flight',2,'delay:dl',5
-put 'flight',3,'delay:dl',4
-put 'flight',4,'delay:dl',16
-scan 'flight'
+    alter 'flight',NAME=>'delay'
+    put 'flight',1,'delay:dl',10
+    put 'flight',2,'delay:dl',5
+    put 'flight',3,'delay:dl',4
+    put 'flight',4,'delay:dl',16
+    scan 'flight'
 
 # Step 11: Start Hive
     
