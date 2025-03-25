@@ -4,7 +4,7 @@
 
 This project implements the WordCount program using Hadoop MapReduce on the Cloudera Distribution of Hadoop (CDH). The WordCount program reads a text file, tokenizes it into words, and counts the occurrences of each word using the MapReduce framework. The program is executed on Cloudera Hadoop and developed using Eclipse for Java coding.
 
-2. Prerequisites
+# 2. Prerequisites
 
 Before running the program, ensure you have the following installed:
 
@@ -18,7 +18,7 @@ HDFS (Hadoop Distributed File System) configured
 
 Git (Optional, for version control)
 
-3. Steps to Execute WordCount in Cloudera Hadoop
+# 3. Steps to Execute WordCount in Cloudera Hadoop
 
 Step 1: Start Cloudera Hadoop Services
 
