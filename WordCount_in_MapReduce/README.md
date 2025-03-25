@@ -8,15 +8,11 @@ This project implements the WordCount program using Hadoop MapReduce on the Clou
 
 Before running the program, ensure you have the following installed:
 
-Cloudera Hadoop (CDH 5.x or later)
-
-Java JDK 8+
-
-Eclipse IDE with Hadoop Libraries
-
-HDFS (Hadoop Distributed File System) configured
-
-Git (Optional, for version control)
+1) Cloudera Hadoop (CDH 5.x or later)
+2) Java JDK 8+
+3) Eclipse IDE with Hadoop Libraries
+4) HDFS (Hadoop Distributed File System) configured
+5) Git (Optional, for version control)
 
 # 3. Steps to Execute WordCount in Cloudera Hadoop
 
