@@ -13,23 +13,24 @@ This launches the HBase shell.
 # Step 3: Create an HBase Table
 Create a table named flight with column families finfo and fsch.
     create 'flight','finfo','fsch'
+
 Check if the table is created:
     list
     
 # Step 4: Insert Data into HBase
 Insert flight records with different source, destination, arrival time, and departure time.
 
-put 'flight',1,'finfo:src','Pune'
-put 'flight',1,'finfo:dest','Mumbai'
-put 'flight',1,'fsch:at','10.25a.m.'
-put 'flight',1,'fsch:dt','11.25a.m.'
-put 'flight',1,'fsch:delay','5min'
+    put 'flight',1,'finfo:src','Pune'
+    put 'flight',1,'finfo:dest','Mumbai'
+    put 'flight',1,'fsch:at','10.25a.m.'
+    put 'flight',1,'fsch:dt','11.25a.m.'
+    put 'flight',1,'fsch:delay','5min'
 
-put 'flight',2,'finfo:src','Pune'
-put 'flight',2,'finfo:dest','Kolkata'
-put 'flight',2,'fsch:at','07.00a.m.'
-put 'flight',2,'fsch:dt','07.30a.m.'
-put 'flight',2,'fsch:delay','2min'
+    put 'flight',2,'finfo:src','Pune'
+    put 'flight',2,'finfo:dest','Kolkata'
+    put 'flight',2,'fsch:at','07.00a.m.'
+    put 'flight',2,'fsch:dt','07.30a.m.'
+    put 'flight',2,'fsch:delay','2min'
 
 # Step 5: Scan the HBase Table
     scan 'flight'
