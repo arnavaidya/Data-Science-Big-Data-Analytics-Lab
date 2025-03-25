@@ -12,6 +12,7 @@ This launches the HBase shell.
 
 # Step 3: Create an HBase Table
 Create a table named flight with column families finfo and fsch.
+    
     create 'flight','finfo','fsch'
 
 Check if the table is created:
