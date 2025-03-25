@@ -78,7 +78,7 @@ Steps:
 
 10. Now, run this command to copy the file input file into the HDFS.
  
-      hadoop fs -put WCFile.txt WCFile.txt
+        hadoop fs -put WCFile.txt WCFile.txt
 
 ![image](https://github.com/user-attachments/assets/a81c9de7-b832-4e3a-bfcc-37cca485f074)
 
@@ -88,7 +88,7 @@ Steps:
 
 12. After Executing the code, you can see the result in WCOutput file or by writing following command on terminal.
  
-      hadoop fs -cat WCOutput/part-00000
+        hadoop fs -cat WCOutput/part-00000
 
 ![image](https://github.com/user-attachments/assets/bbfcb60d-a225-415d-9714-3d340b1d976a)
 
