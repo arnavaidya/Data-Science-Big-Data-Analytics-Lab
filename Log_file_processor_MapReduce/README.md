@@ -22,8 +22,8 @@ Step 1: Start Cloudera Hadoop Services
 2. Start HDFS and YARN ResourceManager.
 3. Open a terminal in Cloudera and verify services using:
 
-    hdfs dfsadmin -report
-    yarn node -list
+        hdfs dfsadmin -report
+        yarn node -list
 
 Step 2: Set Up Eclipse for Hadoop Development
 1. Open Eclipse IDE.
@@ -31,8 +31,8 @@ Step 2: Set Up Eclipse for Hadoop Development
 3. Add Hadoop Libraries:
     1. Right-click on the project → Build Path → Configure Build Path.
     2. Click Add External JARs and select:
-          /usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.6.0-mr1-cdh5.13.0.jar
-        /usr/lib/hadoop/hadoop-common-2.6.0-cdh5.13.0.jar
+           /usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.6.0-mr1-cdh5.13.0.jar
+           /usr/lib/hadoop/hadoop-common-2.6.0-cdh5.13.0.jar
 
 Step 3: Implement WordCount in Java
 
